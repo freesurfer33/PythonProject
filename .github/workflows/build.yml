@@ -6,7 +6,15 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Checkout source and build
+      run: echo Hello, world!
   sonarcloud:
+    needs: build
     name: SonarCloud
     runs-on: ubuntu-latest
     steps:
