@@ -6,4 +6,4 @@ prix = 0
 for key in films:
     prix += films.get(key)
 
-print(prix)
+print("le prix :" + prix)
